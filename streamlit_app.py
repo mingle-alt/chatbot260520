@@ -7,7 +7,7 @@ st.title("🩺 당뇨 건강 관리 챗봇")
 st.write("AI 기반 맞춤형 식습관 및 운동 코칭 서비스")
 
 # API 키 입력
-openai_api_key = st.text_input("OpenAI API Key", type="password")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
 if not openai_api_key:
     st.info("API 키를 입력해주세요.", icon="🗝️")
     st.stop()
